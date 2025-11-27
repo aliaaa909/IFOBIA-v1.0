@@ -81,46 +81,132 @@ IFOBIA addresses these challenges by providing:
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
-- ☕ [Java JDK 17+](https://www.oracle.com/java/technologies/downloads/)
-- 🗄️ [MySQL 8.0+](https://dev.mysql.com/downloads/mysql/)
-- 🔧 [Apache NetBeans IDE](https://netbeans.apache.org/download/index.html) (Optional, for development)
+- ☕ [Java JDK 8+](https://www.oracle.com/java/technologies/downloads/)
+- 🗄️ [XAMPP (MySQL)](https://www.apachefriends.org/download.html) - For database server
+- 🔧 [Apache NetBeans IDE](https://netbeans.apache.org/download/index.html) - Recommended for development
+
+---
 
 ### Step 1: Clone the Repository
-
 ```bash
-git clone https://github.com/dermawannnn99/IFOBIA-v1.0.git
+git clone https://github.com/aliaaa909/IFOBIA-v1.0.git
 cd IFOBIA-v1.0
 ```
 
-### Step 2: Database Setup
+Or download as ZIP from GitHub:
+- Go to https://github.com/aliaaa909/IFOBIA-v1.0
+- Click **Code** → **Download ZIP**
+- Extract the ZIP file
 
-1. Create a new MySQL database:
-```sql
-CREATE DATABASE ifobia_db;
-```
+---
 
-2. Import the database schema:
+### Step 2: Start XAMPP
+
+1. Open **XAMPP Control Panel**
+2. Start **Apache** (optional, for phpMyAdmin)
+3. Start **MySQL** ✅ (required)
+4. Click **Admin** button next to MySQL to open phpMyAdmin
+
+---
+
+### Step 3: Database Setup
+
+#### Option A: Using phpMyAdmin (Recommended)
+
+1. Open phpMyAdmin in browser: `http://localhost/phpmyadmin`
+
+2. Click **New** in left sidebar to create database
+
+3. Database name: `ifobia_db`
+   - Collation: `utf8mb4_general_ci`
+   - Click **Create**
+
+4. Click **Import** tab
+
+5. Choose file: Browse to `ifobia_db (2).sql` in the project folder
+
+6. Click **Go** at bottom of page
+
+7. Wait for success message: "Import has been successfully finished"
+
+#### Option B: Using MySQL Command Line
 ```bash
-mysql -u your_username -p ifobia_db < database/ifobia_schema.sql
+# Create database
+mysql -u root -p -e "CREATE DATABASE ifobia_db;"
+
+# Import SQL file
+mysql -u root -p ifobia_db < "ifobia_db (2).sql"
 ```
 
-3. Update database credentials in `src/config/DatabaseConfig.java`:
+---
+
+### Step 4: Configure Database Connection
+
+1. Open project in NetBeans
+
+2. Navigate to: `com.ifobia.database_util` → `database_utility.java`
+
+3. Update database credentials (if needed):
 ```java
 private static final String DB_URL = "jdbc:mysql://localhost:3306/ifobia_db";
-private static final String DB_USER = "your_username";
-private static final String DB_PASSWORD = "your_password";
+private static final String DB_USER = "root";           // XAMPP default username
+private static final String DB_PASSWORD = "";           // XAMPP default password (empty)
 ```
 
-### Step 3: Build and Run
+**Note:** XAMPP default MySQL credentials:
+- Username: `root`
+- Password: *(empty/blank)*
+
+---
+
+### Step 5: Add MySQL Connector Library
+
+1. In NetBeans, right-click **Libraries** folder
+
+2. Select **Add JAR/Folder**
+
+3. Browse to `mysql-connector-java.jar` in project folder
+
+4. Click **Open**
+
+5. Verify library appears under **Libraries** folder
+
+---
+
+### Step 6: Build and Run
 
 #### Using NetBeans:
-1. Open the project in NetBeans
-2. Click **Run** → **Run Project** or press `F6`
 
-#### Using Command Line:
-```bash
-mvn clean install
-java -jar target/IFOBIA-v1.0.jar
+1. Open the project in NetBeans:
+   - **File** → **Open Project**
+   - Browse to `IFOBIA-v1.0` folder
+   - Click **Open Project**
+
+2. Clean and Build:
+   - Right-click project name
+   - Select **Clean and Build**
+   - Wait for "BUILD SUCCESSFUL" message
+
+3. Run the application:
+   - Click **Run** → **Run Project** (or press `F6`)
+   - Or right-click project → **Run**
+
+4. Login screen should appear! 🎉
+
+---
+
+### 🔐 Default Login Credentials
+
+#### For Students:
+```
+Username: check SQL file
+Password: check SQL file
+```
+
+#### For Course Representatives (PJ):
+```
+Username: check SQL file
+Password: check SQL file
 ```
 
 ---
@@ -190,7 +276,7 @@ Password: check the sql file
 - Backend development and business logic implementation
 - Database integration using JDBC
 - DAO (Data Access Object) pattern implementation
-- 
+
 #### 🎨 **Andhika Eka Pratama** - GUI Designer
 - User interface design and wireframing
 - JavaFX/Swing component development
@@ -349,41 +435,12 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 ---
 
-## 🐛 Bug Reports & Feature Requests
-
-Found a bug or have a feature request? Please open an issue on our [GitHub Issues](https://github.com/dermawannnn99/IFOBIA-v1.0/issues) page.
-
-### Bug Report Template
-- **Description**: Clear description of the bug
-- **Steps to Reproduce**: How to reproduce the issue
-- **Expected Behavior**: What should happen
-- **Actual Behavior**: What actually happens
-- **Screenshots**: If applicable
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙏 Acknowledgments
 
 - 👨‍🏫 **Yuyun Umaidah, M.Kom** - Supporting Lecturer
 - 🏫 **Universitas Singaperbangsa Karawang** - Fakultas Ilmu Komputer
 - 💡 Inspired by the need for better academic information management
 - 🎓 Class B Informatics 2024 - For valuable feedback and testing
-
----
-
-## 📞 Contact
-
-For questions, suggestions, or support, please contact:
-
-- 📧 Email: ifobia.support@example.com
-- 🌐 Website: [ifobia-project.com](#)
-- 💬 Discord: [Join our server](#)
 
 ---
 
