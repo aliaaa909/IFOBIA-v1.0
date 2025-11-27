@@ -263,12 +263,12 @@ Centralized view of **schedules**, **assignments**, and **announcements**.
 <div align="center">
 
 ### Light Mode
-<img src="https://raw.githubusercontent.com/aliaaa909/IFOBIA-v1.0/7bb6fed2f4c69ee67e94a11c9ebb98f209532542/GUI%20DESIGN%20IFOBIA/TUGAS/LIGHT.png" width="500">
+<img src="https://raw.githubusercontent.com/aliaaa909/IFOBIA-v1.0/a77f058060609da1986863562a373bc19278bd84/GUI%20DESIGN%20IFOBIA/KELOLA%20TUGAS/LIGHT.png" width="500">
+
+<br><br>
 
 ### Dark Mode
-<img src="https://raw.githubusercontent.com/aliaaa909/IFOBIA-v1.0/7bb6fed2f4c69ee67e94a11c9ebb98f209532542/GUI%20DESIGN%20IFOBIA/TUGAS/DARK.png" width="500">
-
-Comprehensive assignment management for **course representatives**.
+<img src="https://raw.githubusercontent.com/aliaaa909/IFOBIA-v1.0/a77f058060609da1986863562a373bc19278bd84/GUI%20DESIGN%20IFOBIA/KELOLA%20TUGAS/DARK.png" width="500">
 
 </div>
 
