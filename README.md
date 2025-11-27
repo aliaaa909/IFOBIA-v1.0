@@ -214,31 +214,69 @@ Password: check the sql file
 ## 📂 Project Structure (BELUM FIX)
 
 ```
-IFOBIA-v1.0/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   └── ifobia/
-│   │   │   │       ├── model/          # Data models (User, Tugas, Materi, etc.)
-│   │   │   │       ├── view/           # GUI components
-│   │   │   │       ├── controller/     # Business logic controllers
-│   │   │   │       ├── dao/            # Database access objects
-│   │   │   │       └── util/           # Utility classes
-│   │   └── resources/
-│   │       ├── images/                 # Image assets
-│   │       ├── styles/                 # CSS stylesheets
-│   │       └── fxml/                   # FXML layouts
-├── database/
-│   ├── ifobia_schema.sql              # Database schema
-│   └── sample_data.sql                # Sample data for testing
-├── docs/
-│   ├── ERD.png                        # Entity Relationship Diagram
-│   ├── USE_CASE.png                   # Use Case Diagram
-│   └── USER_MANUAL.md                 # User manual
-├── uploads/                           # Uploaded files storage
-├── pom.xml                            # Maven configuration
-└── README.md                          # This file
+IFOBIA/
+├── Source Packages/
+│   ├── com.ifobia.dao_entity/          # 🗄️ Data Access Layer
+│   │   ├── absensiDAO.java
+│   │   ├── jadwalDAO.java
+│   │   ├── materiDAO.java
+│   │   ├── pengumumanDAO.java
+│   │   ├── tugasDAO.java
+│   │   └── userDAO.java
+│   │
+│   ├── com.ifobia.entity/              # 📦 Model Layer
+│   │   ├── absensi.java
+│   │   ├── jadwal.java
+│   │   ├── mataKuliah.java
+│   │   ├── materi.java
+│   │   ├── pengumuman.java
+│   │   ├── tugas.java
+│   │   └── user.java
+│   │
+│   ├── com.ifobia.form/                # 🖼️ Presentation Layer - Forms
+│   │   ├── FormDashboard.java
+│   │   ├── FormKelolaAbsensi.java
+│   │   ├── FormKelolaJadwal.java
+│   │   ├── FormKelolaPengumuman.java
+│   │   ├── FormKelolaTugas.java
+│   │   ├── FormLogin.java
+│   │   ├── FormMateri.java
+│   │   ├── FormPengumuman.java
+│   │   ├── FormTugas.java
+│   │   ├── FormUploadFileMateri.java
+│   │   └── FormUploadLinkMateri.java
+│   │
+│   ├── com.ifobia.icon/                # 🎨 Icon Resources
+│   │
+│   ├── com.ifobia.menu/                # 📋 Menu Components
+│   │   ├── LightDarkMode.java
+│   │   ├── Menu.java
+│   │   ├── MenuAction.java
+│   │   ├── MenuAnimation.java
+│   │   ├── MenuEvent.java
+│   │   ├── MenuItem.java
+│   │   ├── MenuItemLayout.java
+│   │   └── PopupSubmenu.java
+│   │
+│   ├── com.ifobia.theme/               # 🎨 Theme Configuration
+│   │   ├── FlatDarkLaf.properties
+│   │   ├── FlatLaf.properties
+│   │   └── FlatLightLaf.properties
+│   │
+│   ├── com.ifobia.database_util/       # 🔧 Database Utility
+│   │   └── database_utility.java
+│   │
+│   └── com.ifobia.main/                # 🚀 Main Application
+│       ├── FormMenuUtama.java
+│       └── Main.java
+│
+├── Test Packages/
+├── Test Libraries/
+├── Libraries/
+│   ├── FlatLaf.jar
+│   └── mysql-connector-java.jar
+│
+└── README.md
 ```
 
 ---
