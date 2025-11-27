@@ -173,7 +173,7 @@ Password: check the sql file
 
 <div align="center">
 
-### 🏆 Kelompok Overpower
+### 🏆 Kelompok CKM CITY
 
 | Name | NPM | Role | GitHub |
 |------|-----|------|--------|
@@ -211,7 +211,7 @@ Password: check the sql file
 
 ---
 
-## 📂 Project Structure (BELUM FIX)
+## 📂 Project Structure
 
 ```
 IFOBIA/
