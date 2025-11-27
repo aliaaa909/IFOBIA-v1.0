@@ -195,22 +195,6 @@ private static final String DB_PASSWORD = "";           // XAMPP default passwor
 
 ---
 
-### 🔐 Default Login Credentials
-
-#### For Students:
-```
-Username: check SQL file
-Password: check SQL file
-```
-
-#### For Course Representatives (PJ):
-```
-Username: check SQL file
-Password: check SQL file
-```
-
----
-
 ## 📱 Usage
 
 ### Default Login Credentials
