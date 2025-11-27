@@ -483,7 +483,7 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 **Made with ❤️ by Kelompok CKM CITY**
 
-📅 **Project Timeline:** November 2024 - January 2025
+📅 **Project Timeline:** November 2025
 
 ---
 
