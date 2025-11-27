@@ -269,7 +269,7 @@ Comprehensive assignment management for **course representatives**.
 ---
 
 ## 🎨 More Screenshots
-<div align="center">
+<div align="left">
 
 📂 **For complete GUI design preview, visit:**  
 🖼️ **[View All GUI Designs →](https://github.com/aliaaa909/IFOBIA-v1.0/tree/a77f058060609da1986863562a373bc19278bd84/GUI%20DESIGN%20IFOBIA)**
